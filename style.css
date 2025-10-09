@@ -1,32 +1,27 @@
 body {
-  background-color: #111;
-  color: rgb(55, 210, 169);
+  background-color: #000000;
+  color: orange;
   font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 100px;
 }
-body {
-  background-color: #000;
-  color: orange;
-  text-align: center;
-  font-family: "Cairo", sans-serif;
-}
 
-.my-photo {
-  width: 250px;
-  height: auto;
-  border-radius: 50%;
-  border: 4px solid orange;
-  margin-top: 20px;
-}
 h1 {
   font-size: 40px;
 }
 .my-photo {
+  width:  300px;      /* عرض الصورة */
+  height: 200px;     /* طول الصورة */
+  border-radius: 60%; /* تخليها دايرة */
+  border: 3px solid rgb(0, 0, 0); /* إطار برتقالي */
+  object-fit: cover; /* تخلي الصورة متناسقة */
+  box-shadow: 0 0 10px #00000055; /* ظل خفيف */
+}
+.my-photo {
   width: 250px;
   height: auto;
   border-radius: 50%;
-  border: 4px solid rgb(0, 0, 0);
+  border: 8 solid orange;
   margin-top: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -69,7 +64,7 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid lch(74.84% 76.28 82.87 / 0.998);
+  border: 2px solid rgb(0, 0, 0);
   object-fit: cover;
 }
 
@@ -81,20 +76,60 @@ h1 {
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
 }
-/* شكل الثلاث شرط */
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  cursor: default; /* يعني مش بتتضغط */
-  margin-right: 20px; /* تبعد شوية عن الكلام اللي جنبها */
+/* ====== شريط التنقل ====== */
+.navbar {
+  margin-left: auto;
 }
 
-.menu-icon .bar {
-  height: 3px;
-  width: 100%;
-  background-color: orange;
-  border-radius: 4px;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: orange;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px orange;
+}
+/* ====== تواصل معنا ====== */
+.contact {
+  margin-top: 80px;
+  padding: 50px 20px;
+  background-color: #111;
+  color: orange;
+  text-align: center;
+  border-top: 2px solid orange;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.social a {
+  color: rgb(178, 138, 63);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px orange;
 }
