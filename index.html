@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>marwan world</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    
- <h1><b>بسم الله الرحمن الرحيم</b></h1>
+<div class="pw-wrapper">
+  <div class="pw-box">
+    <div class="pw-top">
+      <span class="lock">🔒</span>
+      <h2>دخول موقع مروان</h2>
+    </div>
 
- <sub> <u><h1>مرحبًا في موقع👋</h1></u> 
-</sub>
- <h1><p>{Marwan World}</p></h1>
- <u><h1>مرحبآ بيك في موقعي!</h1></u>
-<img src="marwan.jpg.jpg" alt="صورة مروان" class="my-photo">
-<h2 class="my-name">Marwan World</h2>
-<h1>7</h1>
+    <div class="pw-form">
+      <input id="password" type="password" placeholder="أدخل كلمة السر" />
+      <button id="toggleBtn" type="button">اظهر</button>
+      <button id="enterBtn" type="button">دخول</button>
+      <p id="error" class="pw-error"></p>
+    </div>
+  </div>
+</div>
 
-
-
+<script>
+  const correctPassword = "marwan2009"; // غيّر هنا
+  const pwInput = document.getElementById('password');
+  const err = document.getElementById('error');
+  document.getElementById('toggleBtn').addEventListener('click', () => {
+    pwInput.type = pwInput.type === 'password' ? 'text' : 'password';
+    document.getElementById('toggleBtn').textContent = pwInput.type === 'password' ? 'اظهر' : 'اخفِ';
+  });
+  function tryLogin() {
+    if (pwInput.value === correctPassword) window.location.href = 'home.html';
+    else err.textContent = 'كلمة السر غير صحيحة';
+  }
+  document.getElementById('enterBtn').addEventListener('click', tryLogin);
+  pwInput.addEventListener('keypress', e => { if (e.key === 'Enter') tryLogin(); });
+</script>
 <header 
 <header class="header">
   <div class="logo">
@@ -28,29 +43,10 @@
     <h1 class="logo-text">Marwan world</h1>
   </div>
 
-  <!-- شريط التنقل -->
-  <nav class="navbar">
-    <ul>
-      
-      <li><a href="#">معرض الصور</a></li>
-      <li><a href="#">تواصل معنا</a></li>
-      <li><a href="#">عنّي</a></li>
-    </ul>
-  </nav>
-</header>
-<!-- قسم تواصل معنا -->
-<section id="contact" class="contact">
-  <h2>تواصل معنا</h2>
-  <p>📞 رقم الهاتف: <strong>01040157059</strong></p>
-  <p>✉ البريد الإلكتروني: <strong>marwanworld0@gmail.com</strong></p>
-  <p>تابعنا على السوشيال ميديا:</p>
-  <div class="social">
-    
-    <a href="#">📸 https://www.instagram.com/marwanworld0?igsh=aGZ6dmo1bWRrMzht</a>
-    
-  </div>
-</section>
 
-</header>
-</body>
-</html>
+
+
+
+
+
+
