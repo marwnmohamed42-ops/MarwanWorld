@@ -220,3 +220,49 @@ audio {
     border-color: transparent;
   }
 }}
+.quiz-btn {
+  background-color: orange;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quiz-btn:hover {
+  background-color: black;
+  color: orange;
+  transform: scale(1.05);
+}
+.btn {
+  display: inline-block;
+  background-color: #ff8c00;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffb347;
+  transform: scale(1.05);
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ff8c00;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #ffa64d;
+  transform: scale(1.05);
+}
