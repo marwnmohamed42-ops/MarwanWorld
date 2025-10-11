@@ -7,11 +7,8 @@
   <title>marwan world</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<div class="sound-box">
-  <h2>🎧 اضغط لتشغيل موسيقى الموقع</h2>
-  <audio controls>
-    <source src="music.mp3.m4a" type="audio/mpeg">
-    المتصفح لا يدعم تشغيل الصوت.
+
+
   </audio>
 </div>
 <!-- زر واتساب للتواصل -->
@@ -20,12 +17,47 @@
    class="whatsapp-btn">
    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+
+
+<audio id="bgMusic" autoplay loop>
+  <source src="musc.mp3.m4a" type="audio/mpeg">
+  متصفحك لا يدعم تشغيل الصوت.
+</audio>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const music = document.getElementById('bgMusic');
+    music.volume = 0.4; // مستوى الصوت 40%
+  });
+</script>
+
+
+
+
+
 <body>
+<div class="typing-container">
+  <h1 id="typing-text"></h1>
+</div>
 
+<script>
+  const text = " مرحبًافي موقع👋";
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      document.getElementById("typing-text").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // السرعة (كل 100 ملي ثانية)
+    }
+  }
+
+  window.onload = type;
+</script>
     
- <h1><b>بسم الله الرحمن الرحيم</b></h1>
+ <h1><b></b></h1>
 
- <sub> <u><h1>مرحبًا في موقع👋</h1></u> 
+ <sub> <u><h1> </h1></u> 
 </sub>
  <h1><p>{Marwan World}</p></h1>
  <u><h1>مرحبآ بيك في موقعي!</h1></u>

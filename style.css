@@ -192,3 +192,31 @@ audio {
   border-radius: 10px;
   outline: none;
 }
+{body {
+  background-color: black;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+.typing-container {
+  text-align: center;
+}
+
+#typing-text {
+  font-size: 2em;
+  border-right: 3px solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}}
